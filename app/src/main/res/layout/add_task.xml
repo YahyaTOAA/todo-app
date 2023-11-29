@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:text="Creation d'un nouveau tach"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="Nom de tach"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+    <EditText
+        android:id="@+id/task_name_edit"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="Enter le nom de tach"
+        app:layout_constraintStart_toStartOf="@+id/task_name"
+        app:layout_constraintTop_toBottomOf="@+id/task_name" />
+
+    <TextView
+        android:id="@+id/task_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="Description de tach"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/task_name_edit"
+        app:layout_constraintTop_toBottomOf="@+id/task_name_edit" />
+
+    <EditText
+        android:id="@+id/task_desc_edit"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:hint="Enter la description de tach"
+        app:layout_constraintStart_toStartOf="@+id/task_desc"
+        app:layout_constraintTop_toBottomOf="@+id/task_desc" />
+
+    <TextView
+        android:id="@+id/task_debut_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Date de debut"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/task_desc_edit"
+        app:layout_constraintTop_toBottomOf="@+id/task_desc_edit" />
+
+    <EditText
+        android:id="@+id/task_debut_date_edit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:hint="Entrer la date de debut"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_debut_date" />
+
+    <TextView
+        android:id="@+id/task_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Date de fin"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/task_desc_edit"
+        app:layout_constraintTop_toBottomOf="@+id/task_desc_edit" />
+
+    <EditText
+        android:id="@+id/task_deadline_edit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:hint="Entrer la date de fin"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_deadline" />
+
+    <RadioGroup
+        android:id="@+id/task_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_desc_edit">
+
+        <RadioButton
+            android:id="@+id/priority_Urgent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Urgent" />
+        <RadioButton
+            android:id="@+id/priority_Moyen"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moyen>" />
+        <RadioButton
+            android:id="@+id/priority_Simple"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_send_newtask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="16dp"
+        android:text="Ajouter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_status" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

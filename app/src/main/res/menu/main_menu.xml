@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuAdd"
+        android:icon="@drawable/ic_add_black"
+        android:title="Ajouter"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menuUpdate"
+        android:title="Modifer"
+        android:icon="@drawable/ic_update_black"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menuDelete"
+        android:title="Supprimer"
+        android:icon="@drawable/ic_delete_black"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menuDisconnect"
+        android:title="Deconnecter"
+        android:icon="@drawable/ic_disconnect_black"
+        app:showAsAction="ifRoom"/>
+</menu>
